@@ -77,7 +77,7 @@ div.rectangle.yellow {
     color: var(--foreground-yellow-gray);
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 800px) {
     div.rectangles {
         flex-direction: row;
     }
@@ -90,7 +90,7 @@ div.rectangle.yellow {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
     div.rectangles {
         flex-direction: column;
     }
