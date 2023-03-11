@@ -1,0 +1,104 @@
+:root {
+    /* Background grays */
+    --rose-gray: rgb(138, 100, 100);
+    --blue-gray: rgb(100, 100, 138);
+    --green-gray: rgb(100, 138, 100);
+    --purple-gray: rgb(138, 100, 138);
+    --yellow-gray: rgb(138, 138, 100);
+
+    /* Foreground grays */
+    --foreground-rose-gray: rgb(179, 145, 145);
+    --foreground-blue-gray: rgb(164, 166, 185);
+    --foreground-green-gray: rgb(164, 185, 164);
+    --foreground-purple-gray: rgb(185, 164, 185);
+    --foreground-yellow-gray: rgb(185, 185, 164);
+
+    --gray: rgba(170, 170, 170, 0.247);
+    --dark-gray: rgba(97, 97, 97, 0.247);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--gray);
+    font-family: var(--font-family);
+}
+
+div.intro {
+    background-color: var(--dark-gray);
+    border-style: ridge;
+    border-color: gray;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2vw;
+    border-width: 5px;
+    width: 96vw;
+}
+div.intro h1 {
+    color: gray;
+    font-size: 4.5vw;
+    text-align: center;
+}
+
+div.rectangles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.rectangle {
+    border-color: var(--gray);
+    border-style: ridge;
+    border-radius: 2vw;
+    border-width: 10px;
+    margin-top: 2vh;
+}
+div.rectangle p {
+    text-align: center;
+}
+div.rectangle.rose {
+    background-color: var(--rose-gray);
+    color: var(--foreground-rose-gray);
+}
+div.rectangle.blue {
+    background-color: var(--blue-gray);
+    color: var(--foreground-blue-gray);
+}
+div.rectangle.green {
+    background-color: var(--green-gray);
+    color: var(--foreground-green-gray);
+}
+div.rectangle.purple {
+    background-color: var(--purple-gray);
+    color: var(--foreground-purple-gray);
+}
+div.rectangle.yellow {
+    background-color: var(--yellow-gray);
+    color: var(--foreground-yellow-gray);
+}
+
+@media screen and (min-width: 1000px) {
+    div.rectangles {
+        flex-direction: row;
+    }
+    div.rectangle {
+        width: 30vw;
+        height: 8vw;
+    }
+    div.rectangle p {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    div.rectangles {
+        flex-direction: column;
+    }
+    div.rectangle {
+        width: 95vw;
+        height: 20vw;
+    }
+    div.rectangle p {
+        font-size: 6vw;
+    }
+}
