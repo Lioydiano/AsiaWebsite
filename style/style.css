@@ -5,6 +5,7 @@
     --green-gray: rgb(100, 138, 100);
     --purple-gray: rgb(138, 100, 138);
     --yellow-gray: rgb(138, 138, 100);
+    --capitello: gray;
 
     /* Foreground grays */
     --foreground-rose-gray: rgb(179, 145, 145);
@@ -12,6 +13,7 @@
     --foreground-green-gray: rgb(164, 185, 164);
     --foreground-purple-gray: rgb(185, 164, 185);
     --foreground-yellow-gray: rgb(185, 185, 164);
+    --foreground-capitello: white;
 
     --gray: rgba(170, 170, 170, 0.247);
     --dark-gray: rgba(97, 97, 97, 0.247);
@@ -23,7 +25,7 @@ body {
     font-family: var(--font-family);
 }
 
-div.intro {
+div.intro, div.outro {
     background-color: var(--dark-gray);
     border-style: ridge;
     border-color: gray;
@@ -33,10 +35,22 @@ div.intro {
     border-width: 5px;
     width: 96vw;
 }
-div.intro h1 {
+div.intro h1, div.outro h1 {
     color: gray;
-    font-size: 4.5vw;
+    font-size: 3.2vw;
     text-align: center;
+}
+div.outro {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+div.outro img {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px 20vw;
+    margin-bottom: 10px;
 }
 
 div.rectangles {
@@ -56,28 +70,24 @@ div.rectangle {
 div.rectangle p {
     text-align: center;
 }
-div.rectangle.rose {
-    background-color: var(--rose-gray);
-    color: var(--foreground-rose-gray);
+div.rectangle.capitello {
+    background-color: var(--capitello);
+    color: var(--foreground-capitello);
+    align-items: center;
 }
-div.rectangle.blue {
-    background-color: var(--blue-gray);
-    color: var(--foreground-blue-gray);
-}
-div.rectangle.green {
-    background-color: var(--green-gray);
-    color: var(--foreground-green-gray);
-}
-div.rectangle.purple {
-    background-color: var(--purple-gray);
-    color: var(--foreground-purple-gray);
-}
-div.rectangle.yellow {
-    background-color: var(--yellow-gray);
-    color: var(--foreground-yellow-gray);
+div.rectangle.capitello img {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
 
+/* CSS per computer */
 @media screen and (min-width: 800px) {
+    div.intro, div.outro {
+        border-width: 15px;
+    }
     div.rectangles {
         flex-direction: row;
     }
@@ -88,17 +98,34 @@ div.rectangle.yellow {
     div.rectangle p {
         font-size: 2.5vw;
     }
+    div.rectangle.capitello {
+        height: 31vw;
+    }
 }
 
+/* CSS per cellulare */
 @media screen and (max-width: 800px) {
+    div.intro, div.outro {
+        border-width: 10px;
+        width: 92vw;
+    }
     div.rectangles {
+        margin-left: auto;
+        margin-right: auto;
         flex-direction: column;
+        justify-content: center;
     }
     div.rectangle {
-        width: 95vw;
-        height: 20vw;
+        border-width: 10px;
+        width: 92vw;
     }
     div.rectangle p {
         font-size: 6vw;
+    }
+    div.rectangle.capitello {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 90vw;
     }
 }
