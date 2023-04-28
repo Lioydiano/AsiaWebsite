@@ -1,18 +1,8 @@
 :root {
     /* Background grays */
-    --rose-gray: rgb(138, 100, 100);
-    --blue-gray: rgb(100, 100, 138);
-    --green-gray: rgb(100, 138, 100);
-    --purple-gray: rgb(138, 100, 138);
-    --yellow-gray: rgb(138, 138, 100);
     --capitello: gray;
 
     /* Foreground grays */
-    --foreground-rose-gray: rgb(179, 145, 145);
-    --foreground-blue-gray: rgb(164, 166, 185);
-    --foreground-green-gray: rgb(164, 185, 164);
-    --foreground-purple-gray: rgb(185, 164, 185);
-    --foreground-yellow-gray: rgb(185, 185, 164);
     --foreground-capitello: white;
 
     --gray: rgba(170, 170, 170, 0.247);
@@ -23,6 +13,7 @@
 body {
     background-color: var(--gray);
     font-family: var(--font-family);
+    overflow-x: hidden;
 }
 
 div.intro, div.outro {
@@ -67,8 +58,13 @@ div.rectangle {
     border-width: 10px;
     margin-top: 2vh;
 }
-div.rectangle p {
+div.rectangle p, div.rectangle a {
+    color: black;
     text-align: center;
+}
+div.rectangle a:hover {
+    color: burlywood;
+    text-decoration: none;
 }
 div.rectangle.capitello {
     background-color: var(--capitello);
