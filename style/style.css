@@ -7,11 +7,12 @@
 
     --gray: rgba(170, 170, 170, 0.247);
     --dark-gray: rgba(97, 97, 97, 0.247);
+    --light-rose: rgb(255, 227, 224);
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: var(--gray);
+    background-color: var(--light-rose);
     font-family: var(--font-family);
     overflow-x: hidden;
 }
@@ -50,6 +51,9 @@ div.rectangles {
     align-items: center;
     flex-wrap: wrap;
 }
+div.rectangles.capitello-page {
+    margin-bottom: 1vw;
+}
 
 div.rectangle {
     border-color: var(--gray);
@@ -78,6 +82,9 @@ div.rectangle.capitello img {
     margin-right: auto;
     border-radius: 10px;
 }
+div.rectangle.capitello img:hover {
+    transform: scale(1.05);
+}
 
 /* CSS per computer */
 @media screen and (min-width: 800px) {
@@ -87,9 +94,20 @@ div.rectangle.capitello img {
     div.rectangles {
         flex-direction: row;
     }
+    div.rectangles.capitello-page {
+        flex-wrap: nowrap;
+    }
+    div.intro.vertical {
+        min-height: 100%;
+        display: flex;
+        width: 0;
+    }
     div.rectangle {
         width: 30vw;
         height: 8vw;
+    }
+    div.rectangle:hover {
+        transform: scale(1.1);
     }
     div.rectangle p {
         font-size: 2.5vw;
@@ -104,6 +122,9 @@ div.rectangle.capitello img {
     div.intro, div.outro {
         border-width: 10px;
         width: 92vw;
+    }
+    div.intro.vertical {
+        display: none;
     }
     div.rectangles {
         margin-left: auto;
