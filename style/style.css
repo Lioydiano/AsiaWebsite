@@ -12,6 +12,7 @@
 }
 
 body {
+    background: radial-gradient(circle, rgb(208, 176, 255) 0%, rgba(148,187,233,1) 100%);
     background-color: var(--light-rose);
     font-family: var(--font-family);
     overflow-x: hidden;
@@ -27,10 +28,21 @@ div.intro, div.outro {
     border-width: 5px;
     width: 96vw;
 }
-div.intro h1, div.outro h1 {
+h1, pre, div.outro h1 {
     color: gray;
     font-size: 3.2vw;
     text-align: center;
+    margin-bottom: 1vw;
+    margin-top: 1vw;
+}
+h1, pre {
+    font-size: 4vw;
+}
+hr {
+    width: 70vw;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(145,134,0, 0.6) 33%, rgba(241,159,35, 0.6) 63%);
 }
 div.outro {
     margin-top: 2vh;
@@ -125,6 +137,15 @@ div.rectangle.capitello img:hover {
     }
     div.intro.vertical {
         display: none;
+    }
+    h1, pre {
+        font-size: 6vw;
+    }
+    div.intro h1 {
+        font-size: 5vw;
+    }
+    div.outro h1 {
+        font-size: 4vw;
     }
     div.rectangles {
         margin-left: auto;
