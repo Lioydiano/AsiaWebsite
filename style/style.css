@@ -98,6 +98,11 @@ div.rectangle.capitello img:hover {
     transform: scale(1.05);
 }
 
+p.centerDescription {
+    font-size: 2vw;
+    text-align: center;
+}
+
 /* CSS per computer */
 @media screen and (min-width: 800px) {
     div.intro, div.outro {
