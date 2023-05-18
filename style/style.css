@@ -18,6 +18,17 @@ body {
     overflow-x: hidden;
 }
 
+h2 {
+    margin-left: 1vw;
+    margin-top: 1vw;
+    text-align: center;
+
+}
+a {
+    text-decoration: none;
+    color: rgb(122, 109, 109);
+    
+}
 div.intro, div.outro {
     background-color: var(--dark-gray);
     border-style: ridge;
@@ -101,6 +112,7 @@ div.rectangle.capitello img:hover {
 p.centerDescription {
     font-size: 2vw;
     text-align: center;
+    
 }
 
 /* CSS per computer */
