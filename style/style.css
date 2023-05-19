@@ -52,6 +52,8 @@ h1, pre {
 hr {
     width: 70vw;
     height: 10px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
     background: linear-gradient(0deg, rgba(145,134,0, 0.6) 33%, rgba(241,159,35, 0.6) 63%);
 }
@@ -112,7 +114,7 @@ div.rectangle.capitello img:hover {
 p.centerDescription {
     font-size: 2vw;
     text-align: center;
-    
+    font-weight: bold;
 }
 
 /* CSS per computer */
